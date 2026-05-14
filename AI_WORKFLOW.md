@@ -25,4 +25,4 @@
 - Ran `npm run lint` for code quality.
 - Ran `npm run build` for a production Next.js compile/type-check.
 - Browser-driven local QA verified create, rename, edit, formatting, save, refresh/reopen, upload, sharing, and owned/shared visibility.
-- Live deployment persistence still needs verification after Supabase and Vercel are connected.
+- Browser-driven live QA on Vercel verified Supabase-backed create, rename, edit, formatting, save, refresh/reopen, upload, sharing, and owned/shared visibility.
