@@ -3,6 +3,7 @@
 ## Included In This Project
 
 - Source code for the Ajaia Docs full-stack Next.js app.
+- GitHub repository: `https://github.com/cobystillzie/ajaia-doc-editor`
 - `README.md` with local setup, Supabase setup, Vercel deployment steps, demo flow, and seeded users.
 - `ARCHITECTURE.md` explaining product scope, stack, data model, and tradeoffs.
 - `AI_WORKFLOW.md` explaining AI usage, rejected scope, and verification.
@@ -19,7 +20,9 @@
 
 ## Live Product URL
 
-Pending until Vercel deployment is completed.
+https://ajaia-doc-editor-two.vercel.app
+
+Note: the live URL is deployed and reachable. Durable live persistence still needs Supabase environment variables added in Vercel.
 
 ## Walkthrough Video URL
 
@@ -56,7 +59,7 @@ Pending until the 3-5 minute walkthrough is recorded.
 - [x] Verify sharing from Coby to Alex works. Local browser QA passed.
 - [x] Verify switching to Alex shows the document under "Shared with me." Local browser QA passed.
 - [x] Verify owned vs shared documents are visibly distinct. Local browser QA passed.
-- [ ] Verify persistence works on the live deployment, not only locally. Incomplete until Supabase env vars are added to Vercel and the live URL is tested.
+- [ ] Verify persistence works on the live deployment, not only locally. Live URL and API respond, but durable persistence is incomplete until Supabase env vars are added to Vercel and the live URL is retested.
 - [x] Run at least one meaningful automated test.
 - [x] Complete `README.md`, `ARCHITECTURE.md`, `AI_WORKFLOW.md`, `SUBMISSION.md`, and `WALKTHROUGH_VIDEO.txt`.
 - [x] Clearly document incomplete/stretch features and what would be built next in 2-4 hours.

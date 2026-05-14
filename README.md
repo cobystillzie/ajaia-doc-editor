@@ -107,6 +107,18 @@ npm run build
 
 ## Vercel Deployment
 
+Current deployment URL:
+
+```text
+https://ajaia-doc-editor-two.vercel.app
+```
+
+GitHub repository:
+
+```text
+https://github.com/cobystillzie/ajaia-doc-editor
+```
+
 1. Push this project to GitHub.
 2. Go to Vercel.
 3. Click **Add New Project**.
@@ -118,7 +130,7 @@ npm run build
 7. Click **Deploy**.
 8. Open the deployed URL and repeat the reviewer demo flow.
 
-If Supabase environment variables are not added, local development still works, but live deployment persistence is not guaranteed because Vercel serverless file storage is not durable.
+If Supabase environment variables are not added, local development still works and the Vercel demo can run through an in-memory fallback, but durable live deployment persistence is not guaranteed because serverless memory is temporary.
 
 ## Scope Cuts
 
