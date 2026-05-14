@@ -1,0 +1,13 @@
+Walkthrough video URL:
+Pending until the walkthrough is recorded.
+
+Recommended 3-5 minute structure:
+1. Show the live Vercel URL.
+2. Create a document as Coby.
+3. Demonstrate rich-text formatting and save.
+4. Refresh and reopen the document.
+5. Upload a .txt or .md file.
+6. Share a Coby-owned document with Alex.
+7. Switch to Alex and show the document under "Shared with me."
+8. Explain intentional scope cuts: no real-time cursors, no OAuth, no .docx import, no comments.
+9. Explain how AI helped and how the app was verified.
