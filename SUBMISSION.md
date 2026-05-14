@@ -22,7 +22,7 @@
 
 https://ajaia-doc-editor-two.vercel.app
 
-Note: the live URL is deployed and reachable. Durable live persistence still needs Supabase environment variables added in Vercel.
+Note: the live URL is deployed and reachable. Durable live persistence still needs these Supabase environment variables added in Vercel: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and `SUPABASE_SERVICE_ROLE_KEY`.
 
 ## Walkthrough Video URL
 
@@ -40,7 +40,7 @@ Pending until the 3-5 minute walkthrough is recorded.
 
 ## Incomplete Until Final Deployment
 
-- Live Vercel persistence verification must be completed after Supabase variables are configured.
+- Live Vercel persistence verification must be completed after Supabase variables are configured in Vercel. Supabase is database-only and does not need to connect to GitHub.
 - Walkthrough video must be recorded and linked.
 - Google Drive folder must be assembled and set to "Anyone with the link -> Viewer."
 
@@ -59,7 +59,7 @@ Pending until the 3-5 minute walkthrough is recorded.
 - [x] Verify sharing from Coby to Alex works. Local browser QA passed.
 - [x] Verify switching to Alex shows the document under "Shared with me." Local browser QA passed.
 - [x] Verify owned vs shared documents are visibly distinct. Local browser QA passed.
-- [ ] Verify persistence works on the live deployment, not only locally. Live URL and API respond, but durable persistence is incomplete until Supabase env vars are added to Vercel and the live URL is retested.
+- [ ] Verify persistence works on the live deployment, not only locally. Live URL and API respond, but durable persistence is incomplete until `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and `SUPABASE_SERVICE_ROLE_KEY` are added to Vercel and the live URL is retested.
 - [x] Run at least one meaningful automated test.
 - [x] Complete `README.md`, `ARCHITECTURE.md`, `AI_WORKFLOW.md`, `SUBMISSION.md`, and `WALKTHROUGH_VIDEO.txt`.
 - [x] Clearly document incomplete/stretch features and what would be built next in 2-4 hours.

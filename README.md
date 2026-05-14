@@ -65,7 +65,8 @@ Use this before deploying to Vercel if reviewers need persistence on the live UR
 8. Click **API**.
 9. Copy:
    - Project URL
-   - `service_role` key
+   - anon/public key or publishable key
+   - `service_role` key or secret key
 10. Create `.env.local` in this project folder:
 
 ```powershell
@@ -75,11 +76,14 @@ copy .env.example .env.local
 11. Open `.env.local` and replace the example values:
 
 ```text
-SUPABASE_URL=https://your-project-ref.supabase.co
-SUPABASE_SERVICE_ROLE_KEY=your-server-only-service-role-key
+NEXT_PUBLIC_SUPABASE_URL=https://your-project-ref.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-public-anon-or-publishable-key
+SUPABASE_SERVICE_ROLE_KEY=your-server-only-service-role-or-secret-key
 ```
 
 Do not commit `.env.local`. The `.gitignore` file excludes it.
+
+Supabase is only the database. It does not need to connect to GitHub. Vercel connects to GitHub and reads these Supabase values from Vercel environment variables.
 
 ## Useful Commands
 
@@ -125,7 +129,8 @@ https://github.com/cobystillzie/ajaia-doc-editor
 4. Import the GitHub repository.
 5. Open **Environment Variables** before deploying.
 6. Add:
-   - `SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
    - `SUPABASE_SERVICE_ROLE_KEY`
 7. Click **Deploy**.
 8. Open the deployed URL and repeat the reviewer demo flow.

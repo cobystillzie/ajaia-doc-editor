@@ -34,8 +34,11 @@ let memoryStore: StoreData | null = null;
 let fileStoreUnavailable = false;
 
 export function getStore(): AppStore {
-  if (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
-    const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY, {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? process.env.SUPABASE_URL;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (supabaseUrl && serviceRoleKey) {
+    const supabase = createClient(supabaseUrl, serviceRoleKey, {
       auth: { persistSession: false },
     });
     return new SupabaseStore(supabase);
