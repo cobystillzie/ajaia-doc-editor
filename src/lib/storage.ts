@@ -30,6 +30,8 @@ export type AppStore = {
 
 const dataDir = path.join(process.cwd(), "data");
 const storePath = path.join(dataDir, "store.json");
+let memoryStore: StoreData | null = null;
+let fileStoreUnavailable = false;
 
 export function getStore(): AppStore {
   if (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY) {
@@ -334,6 +336,11 @@ function assertKnownUser(users: User[], userId: string) {
 }
 
 async function readStore(): Promise<StoreData> {
+  if (fileStoreUnavailable) {
+    memoryStore = memoryStore ?? createInitialStore();
+    return cloneStore(memoryStore);
+  }
+
   try {
     const raw = await readFile(storePath, "utf-8");
     return JSON.parse(raw) as StoreData;
@@ -345,8 +352,22 @@ async function readStore(): Promise<StoreData> {
 }
 
 async function writeStore(store: StoreData) {
-  await mkdir(dataDir, { recursive: true });
-  await writeFile(storePath, `${JSON.stringify(store, null, 2)}\n`, "utf-8");
+  if (fileStoreUnavailable) {
+    memoryStore = cloneStore(store);
+    return;
+  }
+
+  try {
+    await mkdir(dataDir, { recursive: true });
+    await writeFile(storePath, `${JSON.stringify(store, null, 2)}\n`, "utf-8");
+  } catch {
+    fileStoreUnavailable = true;
+    memoryStore = cloneStore(store);
+  }
+}
+
+function cloneStore(store: StoreData): StoreData {
+  return JSON.parse(JSON.stringify(store)) as StoreData;
 }
 
 function mapUser(row: Record<string, string>): User {
