@@ -1,0 +1,11 @@
+Live product URL:
+https://ajaia-doc-editor-two.vercel.app
+
+GitHub repository:
+https://github.com/cobystillzie/ajaia-doc-editor
+
+Seeded reviewer users:
+- Coby Stillman: coby@demo.com
+- Alex Reviewer: alex@demo.com
+
+No password is required. Use the in-app user switcher to test owned and shared document flows.

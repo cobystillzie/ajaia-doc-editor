@@ -1,5 +1,5 @@
 Walkthrough video URL:
-Pending until the walkthrough is recorded.
+https://www.loom.com/share/276639bcce834c0f9c813b0448548f39
 
 Recommended 3-5 minute structure:
 1. Show the live Vercel URL.

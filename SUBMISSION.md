@@ -26,7 +26,7 @@ Note: the live URL is deployed and Supabase-backed persistence has been verified
 
 ## Walkthrough Video URL
 
-Pending until the 3-5 minute walkthrough is recorded.
+https://www.loom.com/share/276639bcce834c0f9c813b0448548f39
 
 ## What Is Working
 
@@ -38,10 +38,11 @@ Pending until the 3-5 minute walkthrough is recorded.
 - Local persistence fallback.
 - Supabase schema and environment variable path for live persistence.
 
-## Incomplete Before Submission
+## Final Packaging Status
 
-- Walkthrough video must be recorded and linked.
-- Google Drive folder must be assembled and set to "Anyone with the link -> Viewer."
+- Walkthrough video is recorded and linked.
+- Google Drive folder: `https://drive.google.com/drive/folders/1UgSrNDE8plIipgKJvF5znFXB60FKQ8Hr`
+- Before final submission, confirm the Google Drive folder is set to "Anyone with the link -> Viewer."
 
 ## Next 2-4 Hours
 
@@ -64,6 +65,7 @@ Pending until the 3-5 minute walkthrough is recorded.
 - [x] Clearly document incomplete/stretch features and what would be built next in 2-4 hours.
 - [x] Confirm no secrets are committed or included in Google Drive. Git contains only `.env.example`; `.env.local` is ignored.
 - [x] Make sure reviewer credentials/seeded users are visible in `README.md` and `SUBMISSION.md`.
+- [x] Add walkthrough video URL.
 
 Local browser QA evidence: `QA Assessment 1778778182593` passed create/rename/edit/save/refresh/reopen, formatting, `.md` upload, share-to-Alex, and owned/shared visibility checks.
 
